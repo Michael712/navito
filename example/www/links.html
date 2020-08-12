@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Test Titel</title>
+	<link rel="stylesheet" href="style/main.css">
+	<link rel="stylesheet" href="style/svg.css">
+	<script src="script/audioplayer.js"></script>
+</head>
+<body>
+    <div id="container">
+		<div id="main">
+			<figure id="navigation">
+				<svg viewBox="0 0 1500 1000">
+					<image width="1500" height="1000" href="images/links.jpeg">
+					</image>
+					
+					<a href="#marienfigur" onclick="popup_show('info_marienfigur')">
+						<rect class="area_link" x="300" y="460" width="75" height="170" />
+					</a>
+
+					
+					<a href="altarraum.html">
+						<g class="pfeil">
+							<rect x="1352" y="320" width="144" height="96" style="fill-opacity:0;stroke:none;opacity:0" />
+							<path
+								d="m 1380,356 h 60 v -16 l 32,28 -32,28 v -16 h -60 z"
+								/>
+						</g>
+					</a>
+				</svg>
+			</figure>
+		</div>
+
+		<div id="footer">
+				
+				<a href="/">Startseite</a>
+				<a href="/impressum.html#impressum">Impressum</a>
+				<a href="/impressum.html#datenschutz">Datenschutz</a>
+		</div> 
+
+    </div>
+
+	<div id="info_marienfigur" class="popup" onclick="popup_hide('marienfigur')">
+		<audio id="audio_marienfigur">
+			<source src="audio/test.mp3" type="audio/mpeg" />
+		</audio>
+		<div id="text_marienfigur" class="popup_desc">
+			<h1>Marienfigur</h1><div class="audio_speaker" onclick="audio_play(event, 'audio_marienfigur')"></div>
+			<p>Hier könnte wieder ein Beschreibungstext stehen.</p>
+		</div>
+	</div>
+</body>
+</html>

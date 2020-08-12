@@ -1,0 +1,81 @@
+settings:
+    output_folder: "www/"
+    image_path: "images/"
+    audio_path: "audio/"
+
+common:
+    title: "Test Titel"
+    home: "/"
+    imprint: "/impressum.html#impressum"
+    privacy: "/impressum.html#datenschutz"
+
+pages:
+    index:
+        width: 1500
+        height: 1000
+        image: "aussen.jpeg"
+        navigation:
+            innen:
+                url: "altarraum.html"
+                type: "area_link"
+                left: 280
+                top: 700
+                width: 130
+                height: 250
+
+    altarraum:
+        width: 1500
+        height: 1000
+        image: "altarraum.jpeg"
+        info:
+            altar:
+                left: 550
+                top: 700
+                width: 380
+                height: 240
+                title: "Altar"
+                description: "Das ist der Text für den Altar."
+            ewiges_licht:
+                left: 340
+                top: 490
+                width: 55
+                height: 180
+                title: "Ewiges Licht"
+                description: "Das ist der Text für das ewige Licht. Der Ton (Start durch Klick auf das Lautsprechersymbol) hat nichts mit dem Bild zu tun."
+                image: "ewiges_licht.jpeg"
+                audio: "test.mp3"
+        navigation:
+            links:
+                url: "links.html"
+                type: "pfeil_links"
+            eingang: 
+                url: "eingang.html"
+                type: "pfeil_umdrehen"
+
+    links:
+        width: 1500
+        height: 1000
+        image: "links.jpeg"
+        info:
+            marienfigur:
+                left: 300
+                top: 460
+                width: 75
+                height: 170
+                title: "Marienfigur"
+                description: "Hier könnte wieder ein Beschreibungstext stehen."
+                audio: "test.mp3"
+        navigation:
+            rechts: 
+                url: "altarraum.html"
+                type: "pfeil_rechts_2"
+                
+    eingang:
+        width: 1500
+        height: 1000
+        image: "eingang.jpeg"
+        navigation:
+            altarraum:
+                url: "altarraum.html"
+                type: "pfeil_umdrehen"
+            

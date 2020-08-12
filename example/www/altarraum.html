@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Test Titel</title>
+	<link rel="stylesheet" href="style/main.css">
+	<link rel="stylesheet" href="style/svg.css">
+	<script src="script/audioplayer.js"></script>
+</head>
+<body>
+    <div id="container">
+		<div id="main">
+			<figure id="navigation">
+				<svg viewBox="0 0 1500 1000">
+					<image width="1500" height="1000" href="images/altarraum.jpeg">
+					</image>
+					
+					<a href="#altar" onclick="popup_show('info_altar')">
+						<rect class="area_link" x="550" y="700" width="380" height="240" />
+					</a>
+					<a href="#ewiges_licht" onclick="popup_show('info_ewiges_licht')">
+						<rect class="area_link" x="340" y="490" width="55" height="180" />
+					</a>
+
+					
+					<a href="links.html">
+						<g class="pfeil">
+							<rect x="16" y="464" width="144" height="96" style="fill-opacity:0;stroke:none;opacity:0" />
+							<path
+								d="m 124,524 -60,0 v 16 l -32,-28 32,-28 v 16 H 124 Z"
+								/>
+						</g>
+					</a>
+					<a href="eingang.html">
+						<g class="pfeil">
+							<rect x="512" y="912" width="128" height="80" style="fill-opacity:0;stroke:none;opacity:0" />
+							<path
+								d="m 600,984 c 0,-44 -36,-44 -36,-24 h 16 l -28,32 -28,-32 h 16 c 0,-44 84,-56 84,24 z"
+								/>
+						</g>
+					</a>
+				</svg>
+			</figure>
+		</div>
+
+		<div id="footer">
+				
+				<a href="/">Startseite</a>
+				<a href="/impressum.html#impressum">Impressum</a>
+				<a href="/impressum.html#datenschutz">Datenschutz</a>
+		</div> 
+
+    </div>
+	<div id="info_altar" class="popup" onclick="popup_hide('altar')">
+		<div id="text_altar" class="popup_desc">
+			<h1>Altar</h1>
+			<p>Das ist der Text für den Altar.</p>
+		</div>
+	</div>
+
+	<div id="info_ewiges_licht" class="popup" onclick="popup_hide('ewiges_licht')">
+		<audio id="audio_ewiges_licht">
+			<source src="audio/test.mp3" type="audio/mpeg" />
+		</audio>
+		<div id="text_ewiges_licht" class="popup_desc_image">
+			<h1>Ewiges Licht</h1><div class="audio_speaker" onclick="audio_play(event, 'audio_ewiges_licht')"></div>
+			<img src="images/ewiges_licht.jpeg" alt="Ewiges Licht" />
+			<p>Das ist der Text für das ewige Licht. Der Ton (Start durch Klick auf das Lautsprechersymbol) hat nichts mit dem Bild zu tun.</p>
+		</div>
+	</div>
+</body>
+</html>

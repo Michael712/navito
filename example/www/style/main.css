@@ -1,0 +1,151 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+	color: black;
+}
+
+#container {
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+  'header'
+  'footer';
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 0fr;
+}
+ 
+#main {
+    height: 100%;
+    position: relative;
+}
+
+#main a,a:link,a:visited {
+	outline: none;
+} 
+
+#main figure, svg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+
+#footer {
+    margin-top: 1em;
+    text-align: center;
+    border-top: 1px solid #aaa;
+}
+
+#footer a {
+    margin: 1em;
+    color: #333;
+}
+
+.popup, .popup_info {
+	display: none;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.popup_info {
+	display: block;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.popup_desc, .popup_desc_image  {
+	display: inline-block;
+	background-color:  rgba(255, 255, 255, 0.8);
+	padding: 0.5em;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.popup_desc_container {
+	height: 100%;
+    display: grid;
+    grid-template-areas:
+  'header'
+  'footer';
+    grid-template-columns: auto;
+    grid-template-rows: 0fr 1fr;
+}
+
+.popup_desc h1 {
+	font-size: 1.25em;
+	margin: 0.5em 0;
+}
+
+.popup_desc_image {
+	max-width: 90vw;
+	max-height: 80vh;
+	margin: 0;
+	padding: 0.5em;
+}
+
+.popup_desc_image h1 {
+	font-size: 1.25em;
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: rgba(255,255,255,0.5);
+	margin: 0.4em;
+	padding: 0.4em;
+}
+
+.popup_desc_image p {
+	padding: 0.5em 0;
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255,255,255,0.5);
+	margin: 0.4em;
+	padding: 0.4em;
+}
+
+.popup_desc_image img {
+	max-width: inherit;
+	max-height: inherit;
+}
+
+.popup_desc_image > .audio_speaker {
+	margin-top: 0.3em;
+}
+
+
+
+.audio_speaker {
+	background-image: url('speaker.svg');
+	background-repeat: no-repeat;
+	background-size: 1.5em;
+	background-position: center;
+	position: absolute;
+	margin-top: 0.4em;
+	height: 2em;
+	width: 2em;
+	right: 0;
+	top: 0.5em;
+	margin-right: 0.8em;
+	opacity: 0.7;
+}
+
+.audio_speaker:hover {
+	opacity: 1.0;
+	cursor: pointer;
+}
