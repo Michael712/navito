@@ -1,0 +1,68 @@
+.area_link {
+	stroke-width: 3;
+	stroke: rgb(255, 0, 0);
+	stroke-opacity: 0.0;
+	fill: #fff;
+	fill-opacity: 0.0;
+	opacity: 1;
+}
+
+.area_link:hover {
+	fill-opacity: 0.5;
+}
+
+.area_link {
+	animation-name: flashing;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+	animation-delay: 4s;
+}
+
+@keyframes flashing {
+	0% {
+		stroke-opacity: 0;
+	}
+	30% {
+		stroke-opacity: 0;
+	}
+	50% {
+		stroke-opacity: 0.7;
+	}
+	75% {
+		stroke-opacity: 0.7;
+	}
+	90% {
+		stroke-opacity: 0;
+	}
+	100% {
+		stroke-opacity: 0;
+	}
+}
+
+
+.pfeil {
+	fill-opacity: 0.4;
+	fill: #07f;
+	stroke-width: 4;
+	stroke: #000;
+	stroke-opacity: 0;
+	animation-name: fastflash;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+}
+
+@keyframes fastflash {
+	0% {
+		stroke-opacity: 0.3;
+	}
+	100% {
+		stroke-opacity: 0;
+	}
+}
+
+.pfeil:hover {
+	fill-opacity: 0.7;
+}

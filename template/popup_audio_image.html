@@ -1,0 +1,11 @@
+
+	<div id="info_%ITEM%" class="popup" onclick="popup_hide('%ITEM%')">
+		<audio id="audio_%ITEM%">
+			<source src="%AUDIOFILE%" type="audio/mpeg" />
+		</audio>
+		<div id="text_%ITEM%" class="popup_desc_image">
+			<h1>%TITLE%</h1><div class="audio_speaker" onclick="audio_play(event, 'audio_%ITEM%')"></div>
+			<img src="%IMAGEFILE%" alt="%TITLE%" />
+			<p>%DESC%</p>
+		</div>
+	</div>
